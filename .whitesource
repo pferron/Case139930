@@ -1,45 +1,37 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "configExternalURL": "",
-    "projectToken": "",
-    "baseBranches": []
-  },
-  "scanSettingsSAST": {
-    "enableScan": true,
-    "scanPullRequests": true,
-    "incrementalScan": true,
-    "baseBranches": [],
-    "snippetSize": 10
+    "enableIaC": true,
+    "enableLicenseViolations": true,
+    "enableReachability": true
   },
   "checkRunSettings": {
-    "vulnerableCheckRunConclusionLevel": "failure",
+    "vulnerableCheckRunConclusionLevel": "success",
+    "licenseCheckRunConclusionLevel": "success",
+    "iacCheckRunConclusionLevel": "success",
+    "failOnVulnerabilityMinCvss": 7,
     "displayMode": "diff",
     "useMendCheckNames": true
   },
-  "checkRunSettingsSAST": {
-    "checkRunConclusionLevel": "failure",
-    "severityThreshold": "high"
-  },
   "issueSettings": {
-    "minSeverityLevel": "LOW",
-    "issueType": "DEPENDENCY"
-  },
-  "issueSettingsSAST": {
-    "minSeverityLevel": "high",
-    "issueType": "repo"
+    "minVulnerabilityScore": 10,
+    "issueType": "DEPENDENCY",
+    "iacIssues": false
   },
   "remediateSettings": {
+    "enableRenovate": true,
     "workflowRules": {
-      "enabled": true
+      "enabled": true,
+      "minVulnerabilityScore": 7,
+      "maxVulnerabilityScore": 10
     }
   },
-   "imageSettings":{
-       "imageTracing":{
-           "enableImageTracingPR": false,
-           "addRepositoryCoordinate": false,
-           "addDockerfilePath": false,
-           "addMendIdentifier": false
-       }
-   }
+  "imageSettings": {
+    "imageTracing": {
+      "enableImageTracingPR": false,
+      "addRepositoryCoordinate": false,
+      "addDockerfilePath": false,
+      "addMendIdentifier": false
+    }
+  }
 }
