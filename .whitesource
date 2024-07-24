@@ -1,18 +1,6 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "enableIaC": true,
-    "enableLicenseViolations": true,
-    "enableReachability": true
-  },
-  "checkRunSettings": {
-    "vulnerableCheckRunConclusionLevel": "success",
-    "licenseCheckRunConclusionLevel": "success",
-    "iacCheckRunConclusionLevel": "success",
-    "failOnVulnerabilityMinCvss": 7,
-    "displayMode": "diff",{
-  "scanSettings": {
-    "configMode": "AUTO",
     "configExternalURL": "",
     "projectToken": "",
     "baseBranches": []
@@ -55,27 +43,3 @@
        }
    }
 } 
-    "useMendCheckNames": true
-  },
-  "issueSettings": {
-    "minVulnerabilityScore": 10,
-    "issueType": "DEPENDENCY",
-    "iacIssues": false
-  },
-  "remediateSettings": {
-    "enableRenovate": true,
-    "workflowRules": {
-      "enabled": true,
-      "minVulnerabilityScore": 7,
-      "maxVulnerabilityScore": 10
-    }
-  },
-  "imageSettings": {
-    "imageTracing": {
-      "enableImageTracingPR": false,
-      "addRepositoryCoordinate": false,
-      "addDockerfilePath": false,
-      "addMendIdentifier": false
-    }
-  }
-}
