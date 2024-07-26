@@ -11,7 +11,7 @@ uvicorn = {version = "^0.17.6", extras = ["standard"]}
 aiohttp = "^3.8.1"
 python-dotenv = "^0.20.0"
 PyJWT = "^2.3.0"
-cryptography = "^37.0.3"
+cryptography = "^43.0.0"
 Jinja2 = "^3.1.1"
 packaging = "^21.3"
 pydantic = "^1.8.2"
